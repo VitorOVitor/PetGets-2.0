@@ -1,7 +1,8 @@
 body 
 {
     font-family: 'Kadwa';
-    background-color: #256447;
+    background-image: url('/imagens/fundo1.jpg');
+    background-size: cover;
     margin: 0px;
     border: 0px;
     padding: 0%;
@@ -68,7 +69,6 @@ main
 section
 {
     width: 100%;
-    background-color: #256447;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

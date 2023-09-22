@@ -5,13 +5,11 @@ html {
 
 aside {
     width: 15%;
-    background-color: #256447;
     word-wrap: break-word;
 }
 
 section {
     width: 85%;
-    background-color: #256447;
     justify-content: space-around;
     flex-wrap: wrap;
     display: flex;
@@ -60,6 +58,7 @@ main {
     color: #FFFFFF;
     border-bottom: 2px solid white;
     padding-bottom: 5px;
+    
 }
 
 .filtrar {
@@ -79,6 +78,9 @@ main {
     border-radius: 4px;
     font-size: 16px;
     margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 button i {
@@ -92,10 +94,6 @@ button i {
 }
 
 
-body {
-    background: #256447;
-
-}
 
 :root {
     --form-control-color: #ff692a;
@@ -193,10 +191,11 @@ input[type="checkbox"]:disabled {
 
 body {
     font-family: 'Kadwa';
-    background-color: #256447;
     margin: 0px;
     border: 0px;
     padding: 0%;
+    background-image: url('/imagens/fundo1.jpg');
+    background-size: cover;
 }
 
 #search {
@@ -250,7 +249,7 @@ header {
     text-align: center;
     text-decoration: none;
     color: whitesmoke;
-    padding: 21px 50px;
+    padding: 23px 50px;
     font-size: 20px;
     font-weight: bold;
     font-weight: 400;
@@ -287,7 +286,7 @@ header {
     padding: 15px 10px;
     margin: -15px;
     border: 2px solid;
-    
+
 }
 
 .login:hover {
@@ -303,10 +302,10 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     display: none;
-    
-  }
-  
-  .cadastro {
+
+}
+
+.cadastro {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -315,46 +314,72 @@ header {
     padding: 20px;
     z-index: 1000;
     border-radius: 10px;
-
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
-  }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
-  .cadastro.show {
-    opacity: 1; /* Quando a classe "show" for adicionada, a tela de cadastro será exibida */
-  }
 
-  .cadastro ul {
+
+.login-form {
+    flex: 1; /* Ocupar todo o espaço disponível à esquerda */
+}
+
+.login-form,
+.cadastro-right {
+    float: left;
+    width: 45%;
+    text-align: left;
+    display: flex; /* Adicionando esta propriedade */
+    flex-direction: column; /* Alinhar os elementos verticalmente */
+}
+
+.cadastro-right {
+    text-align: right;
+}
+
+.cadastro.show .login-form,
+.cadastro.show .cadastro-right {
+    display: block; /* Mostrar os elementos quando .show é aplicada */
+}
+
+.cadastro.show {
+    opacity: 1;
+    /* Quando a classe "show" for adicionada, a tela de cadastro será exibida */
+    
+}
+
+.cadastro ul {
     text-decoration: none;
     list-style: none;
     margin: 0px 0px;
-    padding: 0px 0px;
-  }
 
-  .cadastro a {
+    flex: 1;
+}
+
+.cadastro a {
     color: #256447;
-    
-  }
 
-  .conteudo-centralizado {
+}
+
+.conteudo-centralizado {
     text-align: center;
-  }
+}
 
-  .conteudo-centralizado a {
+.conteudo-centralizado a {
     display: block;
     text-align: left;
-  }
+}
 
 .cadastro ul li p {
     background-color: #ff692a;
     border-radius: 6px;
+    margin: 10px 18px;
     
-}
 
-.cadastro ul li p {
-    margin: 10px;
-    
-    
 }
 
 .cadastro ul li {
@@ -374,22 +399,28 @@ header {
     background-color: #256447;
     color: white;
     border-radius: 6px;
+    width: 206px;
 
 }
 
 .cadastro.hidden {
     display: none;
-  }
+}
 
 button.login:hover {
-    cursor:pointer
+    cursor: pointer
 }
 
 .login-form ul li p {
     text-align: center;
     align-items: center;
-    float: none;
+    margin: 25px;  
+    position: absolute;
+    top: 45px; 
+    
 }
+
+
 
 .menu a:hover {
     background-color: #256447;
@@ -402,7 +433,6 @@ main {
 
 section {
     width: 85%;
-    background-color: #256447;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -411,8 +441,9 @@ section {
 
 aside {
     width: 15%;
-    background-color: #256447;
     word-wrap: break-word;
+    background-color:#256447;
+    
 }
 
 footer {
@@ -445,12 +476,19 @@ footer {
 .card-content h3 {
     margin-top: 7px;
     text-align: center;
-    font-size: 23px;
     margin-bottom: 7px;
     color: #fff;
     border: 2px solid white;
     border-radius: 1px;
     background-color: #256447;
+    font-size: 1.125rem;
+    line-height: 23px;
+    color: rgb(240, 240, 240);
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
 }
 
 
@@ -621,11 +659,11 @@ a.pesquisar {
     padding: 0px;
 }
 
-button a{
+button a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
-    
+
 
 
 
@@ -637,6 +675,7 @@ button a{
     #marca {
         display: none;
     }
+
     .topnav a,
     .topnav input[type=text] {
         float: none;
@@ -656,10 +695,13 @@ button a{
     .sidebar {
         display: none;
     }
+
     #marca {
         display: none;
     }
+
     .container {
-        background-color:#bd4300
+        background-color: #bd4300
     }
 }
+

@@ -9,7 +9,6 @@
 }
 
 .background {
-    background-color: #256447;
     background-size: cover;
     background-position: center top;
     width: 100%;
@@ -17,7 +16,8 @@
     height: 100vh;
 }
 body{
-  background-color: #256447;
+  background-image: url('/imagens/fundo1.jpg');
+  background-size: cover;
 }
 
 .cabeçalho-link{
@@ -28,7 +28,7 @@ body{
     font-size: 2rem;
     gap: 3rem;
     margin-bottom: 1rem;
-    border: 2px solid white;
+    border: 1px solid white;
 }
 
 .cabeçalho-link a{
@@ -65,7 +65,7 @@ body{
   }
   
   input[type="text"] {
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: transparent;
     padding: 10px;
     width: 200px;
@@ -74,17 +74,17 @@ body{
   
   button[type="submit"] {
     background-color: #ff692a;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
     padding: 10px;
     margin-left: 10px;
   }
 
   .card{
-    background: #ff692a;
+    background: #bd4300;
     width: 250px;
     height: 350px;
-    border: 2px solid white;
+    border: 1px solid white;
   }
 
   .card-image{
@@ -94,18 +94,10 @@ body{
     margin-top: 9px;
   }
 
-  .card-content {
-    display: flex;
-    margin-top: 5px;
-    flex-direction: column;
-    background-color: #bd3a02;
-    border: 2px solid white;
-  }
-
 .card-content h3{
     color: white;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .card-button {
@@ -113,11 +105,10 @@ body{
     border: 1px solid #fff;
     color: #fff;
     padding: 5px 10px;
-    margin-left: 10px;
-    width: 100px;
-    margin-left: 70px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 160px;
+    margin-left: 45px;
+    margin-top: 11px;
+    margin-bottom: 8px;
     transition: 0.3s;
   }
 
@@ -263,7 +254,7 @@ header {
   text-align: center;
   text-decoration: none;
   color: whitesmoke;
-  padding: 21px 50px;
+  padding: 23px 50px;
   font-size: 20px;
   font-weight: bold;
   font-weight: 400;
